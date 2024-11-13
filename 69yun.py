@@ -120,8 +120,8 @@ def send_message(msg="", BotToken="", ChatID=""):
             "inline_keyboard": [
                 [
                     {
-                        "text": "一休交流群",
-                        "url": "https://t.me/yxjsjl"
+                        "text": "项目地址",
+                        "url": "https://github.com/jackdk86/69yuncheckin"
                     }
                 ]
             ]
