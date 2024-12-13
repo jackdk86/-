@@ -55,17 +55,17 @@ def fetch_and_extract_info(domain,headers):
     clash_link = None
     for script in script_tags:
         if 'index.oneclickImport' in str(script) and 'clash' in str(script):
-            link = re.search(r"'https://checkhere.top/link/(.*?)\?sub=1'", str(script))
+            link = re.search(r"'https://hongxingdl.com/hxvip\?token=([a-z0-9]+)'", str(script))
             if link:
-                用户信息 += f"Clash 订阅链接: https://checkhere.top/link/{link.group(1)}?clash=1\nv2ray 订阅链接: https://checkhere.top/link/{link.group(1)}?sub=3\n\n"
-                # print(f"Clash 订阅链接: https://checkhere.top/link/{link.group(1)}?clash=1")
-                # print(f"v2ray 订阅链接: https://checkhere.top/link/{link.group(1)}?sub=3")
+                用户信息 += f"Clash 订阅链接: https://hongxingdl.com/hxvip\?token={link.group(1)}"
+                # print(f"Clash 订阅链接: https://hongxingdl.com/hxvip\?token=/{link.group(1)}")
+
                 break
     return 用户信息
 
 def generate_config():
     # 获取环境变量
-    domain = os.getenv('DOMAIN', 'https://69yun69.com')  # 默认值，如果未设置环境变量
+    domain = os.getenv('DOMAIN', 'https://hongxingdl.com')  # 默认值，如果未设置环境变量
     bot_token = os.getenv('BOT_TOKEN')
     chat_id = os.getenv('CHAT_ID')
 
